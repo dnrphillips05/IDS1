@@ -77,7 +77,11 @@
             "dependsOn": [
                 "docker-build: debug"
             ],
-            "dockerRun": {},
+            "dockerRun": {
+                "ports": [
+                    { "hostPort": 5443, "containerPort": 5443}
+                ]
+            },
             "netCore": {
                 "appProject": "${workspaceFolder}/IDS.csproj",
                 "enableDebugging": true
