@@ -27,7 +27,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "https://{ServiceHost}:5443",
+      "launchUrl": "http://{ServiceHost}:5443",
       "publishAllPorts": true,
       "useSSL": true
     }
