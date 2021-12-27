@@ -23,6 +23,4 @@ RUN dotnet publish "IDS.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-EXPOSE 5443/tcp
-ENV ASPNETCORE_URLS=https://+:5443
 ENTRYPOINT ["dotnet", "IDS.dll"]

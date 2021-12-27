@@ -93,9 +93,15 @@
             "dependsOn": [
                 "docker-build: release"
             ],
-            "dockerRun": {},
+            "dockerRun": {
+                "env": {
+                    "ASPNETCORE_URLS": "https://+:5443"
+                }
+            },
             "netCore": {
-                "appProject": "${workspaceFolder}/IDS.csproj"
+                "appProject": "${workspaceFolder}/IDS.csproj",
+                "enableDebugging": true,
+                "configureSsl": true
             }
         }
     ]
